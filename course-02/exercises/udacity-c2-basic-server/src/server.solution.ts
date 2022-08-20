@@ -20,6 +20,7 @@ import { Car, cars as cars_list } from './cars';
     res.status(200).send("Welcome to the Cloud!");
   } );
 
+  // Ajout d'un commentaire
   // Get a greeting to a specific person 
   // to demonstrate routing parameters
   // > try it {{host}}/persons/:the_name
@@ -101,7 +102,7 @@ import { Car, cars as cars_list } from './cars';
     }
 
     // try to find the car by id
-    const car = cars.filter((car) => car.id == id);
+    const car = cars.filter((car) => car.id == parseInt(String(id)));
 
     // respond not found, if we do not have this id
     if(car && car.length === 0) {
